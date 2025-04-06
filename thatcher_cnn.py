@@ -29,6 +29,8 @@ import pandas as pd
 from collections import defaultdict
 
 
+
+
 # Set device once
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("CUDA Available:", torch.cuda.is_available())
@@ -129,10 +131,6 @@ def extract_features(image_path):
         cnn_features
     ])
 
-# Train & evaluate model
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import confusion_matrix, classification_report
 
 def train_and_evaluate(dataset_path):
     print("Extracting features and training SVM...")
